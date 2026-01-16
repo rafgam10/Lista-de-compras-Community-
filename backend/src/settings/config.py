@@ -1,0 +1,8 @@
+from dotenv import load_dotenv
+import os
+
+class Config:
+    
+    SECRET_KEY = os.getenv("SECRET_KEY")
+    SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_TRACK_MODIFICATIONS")
+    SQLALCHEMY_TRACK_MODIFICATIONS = True
