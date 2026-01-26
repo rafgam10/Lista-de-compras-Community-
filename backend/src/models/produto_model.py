@@ -8,5 +8,9 @@ class Produto(db.Model):
     nome = db.Column(db.String, nullable=False, index=True)
     status = db.Column(db.Boolean, nullable=False, default=True, index=True)
     
+    def __init__(self, nome, status):
+        self.nome = nome
+        self.status = status
+    
     def __repr(self):
         return f"Produto: {self.id}.{self.nome} - {self.status}"
