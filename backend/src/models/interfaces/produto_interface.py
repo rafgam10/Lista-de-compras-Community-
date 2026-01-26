@@ -3,14 +3,14 @@ from abc import ABC, abstractmethod
 class ProdutoInterface(ABC):
     
     @abstractmethod
-    def criar_produto() -> None: pass
+    def criar_produto(self, nome:str) -> None: pass
     
     @abstractmethod
-    def produto_all() -> None: pass
+    def produto_all(self) -> None: pass
     
     @abstractmethod
-    def produto_status() -> None: pass
+    def produto_status(self, id_produto:int) -> None: pass
     
     @abstractmethod
-    def produto_delete() -> None: pass
+    def produto_delete(self, id_produto:int) -> None: pass
     
